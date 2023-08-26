@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MVC_Bartender_Application.Data;
+using MVC_Bartender_Application.Models;
 
 namespace MVC_Bartender_Application.Controllers
 {
@@ -15,9 +16,8 @@ namespace MVC_Bartender_Application.Controllers
 
         public IActionResult Index()
         {
-            var objCategoryList = _db.Categories.ToList();
-
-            return View();
+            IEnumerable<Category> objCategoryList = _db.Categories.ToList();
+            return View(objCategoryList);
         }
     }
 }
