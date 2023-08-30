@@ -11,6 +11,7 @@ namespace MVC_Bartender_Application.Data
         }
 
         public DbSet<Category> Categories { get; set; }
+        public DbSet<Cocktail> Cocktails { get; set; }
 
     }
 }
